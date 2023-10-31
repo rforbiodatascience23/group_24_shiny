@@ -12,13 +12,21 @@ mod_plot_ui <- function(id){
   tagList(
     sidebarLayout(
       sidebarPanel(
-        "peptide_sequence"
+        "Peptide sequence"
+      ),
+      textAreaInput(
+        inputId = ns("peptide"),
+        label = "Peptide sequence",
+        width = 300,
+        height = 100,
+        placeholder = "Insert peptide sequence"
       ),
       mainPanel(
-        "plot"
+        "Plot"
       )
-    )
-  )
+    ),
+
+)#taglist
 }
 
 #' plot Server Functions
