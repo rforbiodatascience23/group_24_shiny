@@ -20,7 +20,6 @@ Authors@R: c(person(given = "Konstantinos",
            family = "Rosengaard Jorgensen",
            role = "aut",
            email = "s183451@dtu.dk"))
-Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
@@ -29,4 +28,4 @@ Imports:
     shiny (>= 1.7.5)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
