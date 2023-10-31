@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_dna_expression_ui <- function(id){
+mod_dna_seq_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
@@ -30,6 +30,8 @@ mod_dna_expression_ui <- function(id){
 
   )
 }
+
+
 
 #' dna_seq Server Functions
 #'
