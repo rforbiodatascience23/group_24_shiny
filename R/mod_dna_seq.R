@@ -60,12 +60,12 @@ mod_dna_seq_server <- function(id){
 
   output$peptide <- renderText({
     # Ensure input is not NULL and is longer than 2 characters
-    if(is.null(input$DNA)){
+    if(is.null(input$dna_length)){
       NULL
-    } else if(nchar(input$DNA) < 3){
+    } else if(nchar(input$dna_length) < 3){
       NULL
     } else{
-      input$DNA |>
+      input$dna_length |>
         toupper() |>
         cdogma24::Transcr() |>
         cdogma24::CodonFinder() |>
@@ -74,6 +74,8 @@ mod_dna_seq_server <- function(id){
   }) #renderText
 
 }# mod_dna_seq_server
+
+
 
 ## To be copied in the UI
 # mod_dna_seq_ui("dna_seq_1")
