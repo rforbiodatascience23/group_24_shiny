@@ -12,20 +12,20 @@ mod_plot_ui <- function(id){
   tagList(
     sidebarLayout(
       sidebarPanel(
-        "Peptide sequence"
-      ),
-      textAreaInput(
+        textAreaInput(
         inputId = ns("peptide"),
         label = "Peptide sequence",
         width = 300,
         height = 100,
         placeholder = "Insert peptide sequence"
-      ),
+        )
+      ), # sidebarPanel,
       mainPanel(
-        "Plot"
-      )
-    ),
-
+        plotOutput(
+          outputId = ns("abundance")
+        ) # mainPanel
+      )# Sidebar Layout
+    )#mainPanel
 )#taglist
 }
 
