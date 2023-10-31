@@ -6,7 +6,10 @@
 #'
 #' @noRd
 #'
-#' @importFrom shiny NS tagList
+#' @importFrom ggplot2 theme
+#' @import cdogma24
+#'
+#'
 mod_plot_ui <- function(id){
   ns <- NS(id)
   tagList(
@@ -35,6 +38,16 @@ mod_plot_ui <- function(id){
 mod_plot_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
+    output$abundance <- renderPlot({
+      if(input$peptide == ""){
+        NULL
+      } else{
+        input$peptide |>
+          cdogma24::AAcountsPlot() +
+          ggplot2::theme(legend.position = "none")
+      }
+    })
+
 
   })
 }
