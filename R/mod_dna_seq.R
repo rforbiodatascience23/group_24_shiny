@@ -28,7 +28,6 @@ mod_dna_seq_ui <- function(id){
     shiny::verbatimTextOutput(outputId = ns("peptide")) |>
       shiny::tagAppendAttributes(style = "white-space: pre-wrap;")
 
-
   )
 }
 
