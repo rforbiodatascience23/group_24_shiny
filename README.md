@@ -48,5 +48,7 @@ You can also embed plots, for example:
 
 <img src="man/figures/README-pressure-1.png" width="100%" />
 
+<img src="man/figures/README-pressure-1.svg" width="100%" />
+
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.

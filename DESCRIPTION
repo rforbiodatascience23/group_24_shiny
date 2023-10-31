@@ -21,6 +21,7 @@ Authors@R: c(person(given = "Konstantinos",
            family = "Rosengaard Jorgensen",
            role = "aut",
            email = "s183451@dtu.dk"))
+Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
