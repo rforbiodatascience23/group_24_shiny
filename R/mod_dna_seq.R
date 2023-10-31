@@ -54,12 +54,7 @@ mod_dna_seq_server <- function(id){
       )
 
     })#renderUi
-    observeEvent(input$generate_dna, {
-      dna(
-        cdogma24::SeqLen(input$dna_length)
-      )
-    })# observe event
-  })#module Server
+
 
     output$peptide <- renderText({
       # Ensure input is not NULL and is longer than 2 characters
@@ -76,6 +71,12 @@ mod_dna_seq_server <- function(id){
       }
   }) #renderText
 
+    observeEvent(input$generate_dna, {
+      dna(
+        cdogma24::SeqLen(input$dna_length)
+      )
+    })# observe event
+  })#module Server
 }# mod_dna_seq_server
 
 
