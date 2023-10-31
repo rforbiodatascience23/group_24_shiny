@@ -1,13 +1,28 @@
 Package: Dogma24
-Title: An Amazing Shiny App
+Title: PKG_TITLE
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
-License: What license is it under?
+Authors@R: c(person(given = "Konstantinos",
+           family = "Lyroudis",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s232994@dtu.dk"), 
+           person(given = "Antonios",
+           family = "Otapasidis",
+           role = "aut",
+           email = "s232996@dtu.dk"))
+           person(given = "Georgios",
+           family = "Retsinias",
+           role = "aut",
+           email = "s233079@dtu.dk"))
+           person(given = "Oliver",
+           family = "Morell",
+           role = "aut",
+           email = "s204116@dtu.dk"))
+           person(given = "Andre",
+           family = "Rosengaard Jorgensen",
+           role = "aut",
+           email = "s183451@dtu.dk"))
+Description: PKG_DESC.
+License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
     golem (>= 0.4.1),
