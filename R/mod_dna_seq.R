@@ -58,20 +58,8 @@ mod_dna_seq_server <- function(id){
     })# observe event
   })#module Server
 
-  output$peptide <- renderText({
-    # Ensure input is not NULL and is longer than 2 characters
-    if(is.null(input$DNA)){
-      NULL
-    } else if(nchar(input$DNA) < 3){
-      NULL
-    } else{
-      input$DNA |>
-        toupper() |>
-        cdogma24::Transcr() |>
-        cdogma24::CodonFinder() |>
-        cdogma24::ProChain()
-    }
-  }) #renderText
+
+
 
 }# mod_dna_seq_server
 
