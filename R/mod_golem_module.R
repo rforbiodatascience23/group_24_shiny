@@ -29,3 +29,13 @@ mod_golem_module_server <- function(id){
 
 ## To be copied in the server
 # mod_golem_module_server("golem_module_1")
+
+if(FALSE){ # Testing
+  golem::detach_all_attached()
+  golem::document_and_reload()
+  ui <- mod_NAME_ui("mod_golem_module_ui") # replace NAME here
+  server <- function( input,output,session){
+    mod_NAME_server("mod_golem_module_server") # and here
+  }
+  shiny::shinyApp(ui, server)
+}
