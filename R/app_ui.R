@@ -12,7 +12,7 @@ app_ui <- function(request) {
     fluidPage(
       h1("Dogma24"),
       tabsetPanel(
-        tabPanel(title = "panel1",
+        tabPanel(title = "DNAtoPeptide",
                  "module1"),
         tabPanel(title = "Amino Acid Plot",
                  mod_plot_ui("plot_1"))
