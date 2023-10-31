@@ -37,25 +37,27 @@ mod_dna_seq_ui <- function(id){
 #' dna_seq Server Functions
 #'
 #' @noRd
-mod_dna_seq_server <- function(id) {
-  moduleServer(id, function(input, output, session) {
+mod_dna_seq_server <- function(id){
+  moduleServer( id, function(input, output, session){
     ns <- session$ns
     dna <- reactiveVal()
-
     output$DNA <- renderUI({
       textAreaInput(
         inputId = ns("DNA"),
         label = "DNA sequence",
         placeholder = "Insert DNA sequence",
         value = dna(),
-        height = "100px",
-        width = "600px"
+        height = 100,
+        width = 600
       )
-    })
 
+    })#renderUi
     observeEvent(input$generate_dna, {
-      dna(cdogma24::SeqLen(input$dna_length))
-    })
+      dna(
+        cdogma24::SeqLen(input$dna_length)
+      )
+    })# observe event
+  })#module Server
 
     output$peptide <- renderText({
       # Ensure input is not NULL and is longer than 2 characters
@@ -64,18 +66,15 @@ mod_dna_seq_server <- function(id) {
       } else if(nchar(input$DNA) < 3){
         NULL
       } else{
-        result <- input$DNA |>
+        input$DNA |>
           toupper() |>
           cdogma24::Transcr() |>
           cdogma24::CodonFinder() |>
           cdogma24::ProChain()
-        return(result)
       }
-    })
-  })
-}
+  }) #renderText
 
-
+}# mod_dna_seq_server
 
 
 
