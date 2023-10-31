@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+=======
+^.*\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+dev_history.R
+^dev$
+$run_dev.*
+^.here$
+^LICENSE\.md$
+^README\.Rmd$
+^app\.R$
+^rsconnect$
+>>>>>>> 8c7fb63d5ebdab32a55afefea4cd64f731f696d4
