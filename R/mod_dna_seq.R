@@ -49,8 +49,13 @@ mod_dna_seq_server <- function(id){
         height = 100,
         width = 600
       )
-    })#renderUi
 
+    })#renderUi
+    observeEvent(input$generate_dna, {
+      dna(
+        cdogma24::SeqLen(input$dna_length)
+      )
+    })# observe event
   })#module Server
 
 }# mod_dna_seq_server
