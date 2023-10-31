@@ -52,11 +52,7 @@ mod_dna_seq_server <- function(id){
     })#renderUi
 
   })#module Server
-  observeEvent(input$generate_dna, {
-    dna(
-      cdogma24::SeqLen(input$dna_length)
-    )
-  })
+
 }# mod_dna_seq_server
 
 ## To be copied in the UI
