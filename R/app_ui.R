@@ -13,7 +13,7 @@ app_ui <- function(request) {
       h1("Dogma24"),
       tabsetPanel(
         tabPanel(title = "DNA to RNA",
-                 mod_dna_seq_ui("dna_seq_1")),
+                 mod_dna_seq_ui("dna_seq_1")), # here is why we need the mod_dna_seq_ui name for the ui function in the mod_dna_seq.R file
         tabPanel(title = "Amino Acid Plot",
                  mod_plot_ui("plot_1"))
       )# tabsetPanel

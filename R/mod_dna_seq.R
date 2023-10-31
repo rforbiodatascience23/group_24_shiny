@@ -39,9 +39,20 @@ mod_dna_seq_ui <- function(id){
 mod_dna_seq_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
+    dna <- reactiveVal()
+    output$DNA <- renderUI({
+      textAreaInput(
+        inputId = ns("DNA"),
+        label = "DNA sequence",
+        placeholder = "Insert DNA sequence",
+        value = dna(),
+        height = 100,
+        width = 600
+      )
+    })#renderUi
 
-  })
-}
+  })#module Server
+}# mod_dna_seq_server
 
 ## To be copied in the UI
 # mod_dna_seq_ui("dna_seq_1")
