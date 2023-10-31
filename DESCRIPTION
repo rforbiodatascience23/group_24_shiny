@@ -4,7 +4,6 @@ Version: 0.0.0.9000
 Authors@R: c(person(given = "Konstantinos",
            family = "Lyroudis",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
-           email = "s232994@dtu.dk"),
            person(given = "Antonios",
            family = "Otapasidis",
            role = "aut",
@@ -21,6 +20,7 @@ Authors@R: c(person(given = "Konstantinos",
            family = "Rosengaard Jorgensen",
            role = "aut",
            email = "s183451@dtu.dk"))
+Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
