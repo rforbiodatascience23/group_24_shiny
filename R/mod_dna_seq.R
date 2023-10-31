@@ -26,7 +26,10 @@ mod_dna_seq_ui <- function(id){
       ))
     ),
     shiny::verbatimTextOutput(outputId = ns("peptide")) |>
-      shiny::tagAppendAttributes(style = "white-space: pre-wrap;")
+      shiny::tagAppendAttributes(style = "white-space: pre-wrap;"),
+
+    shiny::verbatimTextOutput(outputId = ns("DNA"))
+
 
   )
 }
@@ -70,7 +73,7 @@ mod_dna_seq_server <- function(id){
           cdogma24::Transcr() |>
           cdogma24::CodonFinder() |>
           cdogma24::ProChain()
-    }
+      }
   }) #renderText
 
 }# mod_dna_seq_server
