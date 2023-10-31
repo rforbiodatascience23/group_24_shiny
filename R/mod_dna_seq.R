@@ -28,8 +28,6 @@ mod_dna_seq_ui <- function(id){
     shiny::verbatimTextOutput(outputId = ns("peptide")) |>
       shiny::tagAppendAttributes(style = "white-space: pre-wrap;"),
 
-    shiny::verbatimTextOutput(outputId = ns("DNA"))
-
 
   )
 }
@@ -54,7 +52,12 @@ mod_dna_seq_server <- function(id){
       )
 
     })#renderUi
-
+    observeEvent(input$generate_dna, {
+      dna(
+        cdogma24::SeqLen(input$dna_length)
+      )
+    })# observe event
+  })#module Server
 
     output$peptide <- renderText({
       # Ensure input is not NULL and is longer than 2 characters
@@ -71,12 +74,6 @@ mod_dna_seq_server <- function(id){
       }
   }) #renderText
 
-    observeEvent(input$generate_dna, {
-      dna(
-        cdogma24::SeqLen(input$dna_length)
-      )
-    })# observe event
-  })#module Server
 }# mod_dna_seq_server
 
 
