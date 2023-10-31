@@ -1,10 +1,9 @@
 Package: Dogma24
-Title: PKG_TITLE
+Title: Shiny app for molecular biology central dogma
 Version: 0.0.0.9000
 Authors@R: c(person(given = "Konstantinos",
            family = "Lyroudis",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
-           email = "s232994@dtu.dk"), 
            person(given = "Antonios",
            family = "Otapasidis",
            role = "aut",
