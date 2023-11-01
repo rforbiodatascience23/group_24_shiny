@@ -12,15 +12,22 @@ app_ui <- function(request) {
     fluidPage(
       h1("Dogma24"),
       tabsetPanel(
-        tabPanel(title = "DNA to RNA",
-                 mod_dna_seq_ui("dna_seq_1")), # here is why we need the mod_dna_seq_ui name for the ui function in the mod_dna_seq.R file
+        tabPanel(title = "Generate DNA",
+                 mod_generate_dna_ui("generate_dna_1")),
+        tabPanel(title = "Transcription",
+                 mod_transcription_ui("transcription_1")),
+        tabPanel(title = "Translation",
+                 mod_translation_ui("translation_1")),
         tabPanel(title = "Amino Acid Plot",
                  mod_plot_ui("plot_1"))
       )# tabsetPanel
     )#fluidPage
   )
 }
-
+'        tabPanel(title = "Translation",
+                 mod_translation_ui("translation_1")),
+        tabPanel(title = "Amino Acid Frequencies",
+                 mod_aa_frequencies_ui("aa_frequencies_1")),'
 #' Add external Resources to the Application
 #'
 #' This function is internally used to add external
